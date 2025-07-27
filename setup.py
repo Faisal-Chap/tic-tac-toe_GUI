@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'tk',  # Tkinter, might not be needed if system-installed
+        # You don't need 'tk' — it's system installed
     ],
     entry_points={
         'console_scripts': [
