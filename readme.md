@@ -1,79 +1,80 @@
 # 🎮 Tic Tac Toe (GUI Edition for Linux)
-
 A modern, beautiful Tic Tac Toe game built with Python's Tkinter — play against a friend or the computer, track scores, and view game history — now installable and launchable like a native Linux app!
 
----
-
 ## 🖼️ Features
-
 - ✅ GUI-based game with modern, colorful theme
-- 🧠 Play with Friend or vs Computer (Bot AI)
-- 🎯 Track player names, scores, and game history
-- 💾 Persistent score saving using local file
-- 🔁 Restart game with a click
-- 📜 View all-time winners in a history window
-- 📦 Installable on Linux as a desktop app with icon
 
----
+- 🧠 Play with Friend or vs Computer (Bot AI)
+
+- 🎯 Track player names, scores, and game history
+
+- 💾 Persistent score saving using local file
+
+- 🔁 Restart game with a click
+
+- - 📜 View all-time winners in a history window
+
+- 📦 Installable on Linux as a desktop app with icon and terminal command
 
 ## 📦 Installation (Linux - App Menu & Terminal Access)
-
 ### 📥 1. Clone the repository
-
 ```bash
 git clone https://github.com/Faisal-Chap/tic-tac-toe_GUI.git
-cd tic_tac_toe
-
-
-
+cd tic-tac-toe_GUI
 ```
+### 🚀 2. Install the app
+Recommended: use pipx to install in an isolated environment and expose the tictactoe command globally:
 
-### 🚀 2. Install the app (adds to App Menu)
+```bash
+pipx install .
+```
+If you don’t have pipx installed, you can install it with:
+
+```bash
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+After installation, you can run:
+
+```bash
+tictactoe
+```
+### 🔧 3. Add app launcher to your desktop environment (App Menu)
+Run:
 
 ```bash
 python3 install.py
-
 ```
+This will add the Tic Tac Toe app to your system app menu with icon support.
 
-### 🧪 3. (Optional) Run from terminal
-
-You can also run directly with Python:
+### 🧪 4. (Optional) Run directly from source
+If you want to run without installing:
 
 ```bash
-python3 main.py
+python3 -m tic_tac_toe
 ```
-
-Or install via pip for terminal command:
-
-```bash
-pip install .
-tictactoe  # Run from any terminal
-```
-
 ### 🧠 How to Play
+- Launch the game from your App Menu or run tictactoe in terminal.
 
-Launch the game (Tic Tac Toe from App Menu).
+- Enter player name(s).
 
-Enter player name(s).
+- Choose to play vs Friend or Bot (Computer).
 
-Choose to play vs Friend or Bot (Computer).
+- Click on the board to place your X or O.
 
-Click to place your X or O on the board.
+- Use the Restart button to reset the game.
 
-Click Restart to reset.
-
-Click Winners to view full history.
+- Click the Winners button to view full game history and winners.
 
 ### 💡 Advanced Notes
+The app icon and desktop launcher are installed in your home directory under ~/.local/share/ for user-only access.
 
-The app icon and launcher are added system-wide for your user using ~/.local paths.
+Game data (scores & history) are saved persistently in a local file named history.json inside the tic_tac_toe package folder.
 
-Game data (scores & history) are saved locally in score.json.
+The command-line shortcut tictactoe runs the GUI from anywhere after pipx installation.
 
 ### 🧑‍💻 Author
-
-Built with 💙 Faisal Chap
+Built with 💙 by Faisal Chap
 
 ### 📄 License
-
-MIT License – use freely, modify openly.
+MIT License — feel free to use, modify, and share!
