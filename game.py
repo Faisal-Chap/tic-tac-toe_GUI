@@ -58,7 +58,12 @@ def show_history():
 
 
 # Start the game
-def start_game(player_name, mode):
+def start_game(player_name, mode, player2_name="Computer"):
+    player_map = {
+    "X": player_name,
+    "O": player2_name
+    }
+
     current_player = ["X"]
     board_state = [["" for _ in range(3)] for _ in range(3)]
     score = {"X": 0, "O": 0, "Tie": 0}
@@ -110,7 +115,8 @@ def start_game(player_name, mode):
 
             score[winner] += 1
             update_score()
-            save_history(winner, player_name)
+            save_history(player_map.get(winner, "Unknown"), player_name)
+
             return_to_main()
             return
 
@@ -146,8 +152,17 @@ def start_game(player_name, mode):
 
     tk.Label(root, text=f"Player: {player_name}", font=("Helvetica", 14), bg="#f0f4f8").pack(pady=5)
 
-    score_label = tk.Label(root, text="", font=("Helvetica", 12, "bold"), bg="#f0f4f8", fg="#222")
+    score_label = tk.Label(root, text="", font=("Helvetica", 12, "bold"), bg="#fef9f5", fg="#222")
     score_label.pack()
+
+    names_label = tk.Label(root,
+        text=f"{player_name} (X) vs {player2_name} (O)",
+        font=("Helvetica", 12),
+        bg="#fef9f5",
+        fg="#4b5563"
+    )
+    names_label.pack()
+
     update_score()
 
     frame = tk.Frame(root, bg="#f0f4f8")
