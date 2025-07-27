@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Tic Tac Toe
 Comment=Play Tic Tac Toe with a modern GUI
-Exec=python3 -m tic_tac_toe.main
+Exec=tictactoe
 Icon=tictactoe
 Terminal=false
 Type=Application
