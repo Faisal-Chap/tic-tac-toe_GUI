@@ -136,7 +136,7 @@ def start_game(player_name, mode, player2_name="Computer"):
 
     def return_to_main():
         root.destroy()
-        import main
+        import tic_tac_toe.main as main
 
 
     def update_score():
